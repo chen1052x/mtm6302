@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APOD Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+  <header>
+    <nav class="navbar">
+      <div class="logo">APOD Explorer</div>
+      <div class="nav-actions">
+        <button id="toggleMode" aria-label="Toggle dark/light mode">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <h1>Discover NASA's Astronomy Picture of the Day</h1>
+      <form id="apodForm" aria-label="Search APOD by date">
+        <label for="apodDate">Select a date (no future dates)</label>
+        <input type="date" id="apodDate" name="date" required>
+        <button type="submit">Get APOD</button>
+      </form>
+    </section>
+
+    <section id="apodDisplay" class="apod-display" hidden>
+    </section>
+
+    <section id="favoritesSection" class="favorites-section">
+      <h2>Your Favourites</h2>
+      <div id="favoritesList" class="favorites-list">
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" role="button" tabindex="0" aria-label="Close image">&times;</span>
+      <img id="modalImg" alt="">
+    </div>
+  </div>
+<script src="script.js"></script>
 </body>
 </html>
