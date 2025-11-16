@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Dark / light mode toggle (unchanged)
   const toggleMode = document.getElementById('toggleMode');
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleMode.textContent = theme === 'light' ? '🌞' : '🌙';
   });
 
-  // Minimal Wikimedia POD logic (your template)
+
   const $img = document.getElementById('photo');
   const $desc = document.getElementById('description');
   const $form = document.getElementById('apodForm');
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $form.addEventListener('submit', e => {
     e.preventDefault();
 
-    const value = $date.value;   // yyyy-mm-dd
+    const value = $date.value;   
     if (!value) return;
 
     const [y, m, d] = value.split('-');
@@ -33,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(res => res.json())
       .then(data => {
 
-        // Wikimedia stores image here (minimal fix)
+
         const image =
           data.image?.image?.source ||
           data.image?.thumbnail?.source ||
