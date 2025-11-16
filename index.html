@@ -12,7 +12,7 @@
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">APOD Explorer</div>
+      <div class="logo">Wikimedia POD Explorer</div>
       <div class="nav-actions">
         <button id="toggleMode" aria-label="Toggle dark/light mode">🌙</button>
       </div>
@@ -21,15 +21,17 @@
 
   <main>
     <section class="search-section">
-      <h1>Discover NASA's Astronomy Picture of the Day</h1>
+      <h1>Discover Wikimedia-Featured's Picture of the Day</h1>
       <form id="apodForm" aria-label="Search APOD by date">
         <label for="apodDate">Select a date (no future dates)</label>
         <input type="date" id="apodDate" name="date" required>
-        <button type="submit">Get APOD</button>
+        <button type="submit">Get POD</button>
       </form>
     </section>
 
     <section id="apodDisplay" class="apod-display" hidden>
+       <img id="photo" class="apod-img" alt="">
+       <p id="description" class="apod-explanation"></p>
     </section>
 
     <section id="favoritesSection" class="favorites-section">

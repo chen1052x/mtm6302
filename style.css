@@ -121,6 +121,7 @@ body.light-mode input[type="date"] {
   background-color: var(--highlight-color);
 }
 
+
 .apod-display {
   margin-bottom: 2rem;
 }
@@ -146,7 +147,7 @@ body.light-mode input[type="date"] {
 
 .apod-img {
   width: 100%;
-  max-height: 400px;
+  max-height: 100%;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 1rem;
@@ -176,7 +177,6 @@ body.light-mode input[type="date"] {
   cursor: default;
 }
 
-/* Favourites section */
 .favorites-section {
   margin-top: 2rem;
 }
